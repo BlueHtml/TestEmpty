@@ -31,6 +31,12 @@ jobs:
           pwd
           date > generated.txt
           cat generated.txt
+      - name: test2
+        run: |
+          pwd
+          ls
+          echo hh > t.txt
+          cat t.txt
       - uses: actions/checkout@main
         with:
           repository: 'RayWangQvQ/BiliBiliTool'
@@ -42,3 +48,8 @@ jobs:
           pwd
           ls
           cat generated.txt
+      - name: test2
+        run: |
+          pwd
+          ls
+          cat t.txt
