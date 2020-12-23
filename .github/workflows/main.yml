@@ -26,10 +26,11 @@ jobs:
       - name: test
         run: |
           sudo date > /home/generated.txt
-          cat /home/generated.txt
+          sudo cat /home/generated.txt
       - uses: actions/checkout@main
         with:
           repository: 'RayWangQvQ/BiliBiliTool'
       - name: test
         run: |
+          ls /home -a
           cat /home/generated.txt
