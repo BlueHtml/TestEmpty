@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@main
       - name: test
         run: |
-          date > /home/generated.txt
+          sudo date > /home/generated.txt
           cat /home/generated.txt
       - uses: actions/checkout@main
         with:
