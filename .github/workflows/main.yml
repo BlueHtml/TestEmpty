@@ -25,6 +25,8 @@ jobs:
       - uses: actions/checkout@main
       - name: test
         run: |
+          pwd
+          ls
           cd ../
           pwd
           date > generated.txt
@@ -34,6 +36,8 @@ jobs:
           repository: 'RayWangQvQ/BiliBiliTool'
       - name: test
         run: |
+          pwd
+          ls
           cd ../
           pwd
           ls
