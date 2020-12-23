@@ -26,6 +26,7 @@ jobs:
       - name: test
         run: |
           cd ../
+          pwd
           date > generated.txt
           cat generated.txt
       - uses: actions/checkout@main
@@ -34,5 +35,6 @@ jobs:
       - name: test
         run: |
           cd ../
+          pwd
           ls
           cat generated.txt
