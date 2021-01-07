@@ -36,11 +36,9 @@ jobs:
           pwd
           ls
           wget -O chromium.tar.xz https://github.com/macchrome/linchrome/releases/download/v81.0.4044.92-r737173-portable-ungoogled-Lin64/ungoogled-chromium_81.0.4044.92_1.vaapi_linux.tar.xz
-          tar -xf chromium.tar.xz -C ./chromium
+          tar -xf chromium.tar.xz
           ls
           echo 'hhhhh'
-          cd ./chromium
-          ls
       - name: test2
         run: |
           pwd
