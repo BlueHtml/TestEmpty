@@ -34,10 +34,11 @@ jobs:
       - name: test
         run: |
           pwd
-          mkdir chromium
+          mkdir tmp chromium
           ls
-          wget -O chromium.tar.xz https://github.com/macchrome/linchrome/releases/download/v81.0.4044.92-r737173-portable-ungoogled-Lin64/ungoogled-chromium_81.0.4044.92_1.vaapi_linux.tar.xz
-          tar -xf chromium.tar.xz -C chromium
+          wget -O down https://github.com/macchrome/linchrome/releases/download/v81.0.4044.92-r737173-portable-ungoogled-Lin64/ungoogled-chromium_81.0.4044.92_1.vaapi_linux.tar.xz
+          tar -xf down -C tmp
+          mv -f tmp/*/* chromium
           ls
           echo 'hhhhh'
           cd chromium
