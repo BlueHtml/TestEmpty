@@ -14,9 +14,9 @@ jobs:
     steps:
     - name: Run
       run: |
-        add-apt-repository ppa:mc3man/mpv-tests
-        apt-get update
-        apt-get install mpv
+        sudo add-apt-repository ppa:mc3man/mpv-tests
+        sudo apt-get update
+        sudo apt-get install mpv
         git clone https://github.com/AyushRawal/YTMusic.git
         pip3 install youtube-dl argparse prettytable colorama requests
         python ytmusic.py -d https://music.youtube.com/watch?v=ks7CfcUZHII
