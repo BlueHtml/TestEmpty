@@ -15,7 +15,7 @@ def my_hook(d):
         file_tuple = os.path.split(os.path.abspath(d['filename']))
         print("\nDone downloading {}".format(file_tuple[1]))
     if d['status'] == 'downloading':
-        # print(f"Downloading : {d['_percent_str']}  Time Remaining : {d['_eta_str']}", end="\r")
+        print(f"Downloading : {d['_percent_str']}  Time Remaining : {d['_eta_str']}", end="\r")
 
 
 ydl_opts = {'outtmpl': '%(title)s.%(ext)s',
