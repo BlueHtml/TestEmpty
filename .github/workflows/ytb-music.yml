@@ -27,6 +27,6 @@ jobs:
         pip3 install youtube-dl argparse prettytable colorama requests
     - name: Run
       run: |
-        python ytmusic.py -d https://music.youtube.com/watch?v=ks7CfcUZHII
+        python ytmusic.py -d
     - name: List
       run: ls -a
