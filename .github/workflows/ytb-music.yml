@@ -1,0 +1,24 @@
+name: ytb-music
+
+on:
+  watch:
+    types: [started]
+  workflow_dispatch: # 网页上手动
+
+jobs:
+  build:
+
+    if: github.actor == github.repository_owner
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Run
+      run: |
+        add-apt-repository ppa:mc3man/mpv-tests
+        apt-get update
+        apt-get install mpv
+        git clone https://github.com/AyushRawal/YTMusic.git
+        pip3 install youtube-dl argparse prettytable colorama requests
+        python ytmusic.py -d https://music.youtube.com/watch?v=ks7CfcUZHII
+    - name: Run
+      run: ls -a
