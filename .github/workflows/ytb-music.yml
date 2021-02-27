@@ -18,7 +18,15 @@ jobs:
         sudo add-apt-repository ppa:mc3man/mpv-tests
         sudo apt-get update
         sudo apt-get install mpv
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        pip3 install --upgrade pip
         pip3 install youtube-dl argparse prettytable colorama requests
+    - name: Run
+      run: |
         python ytmusic.py -d https://music.youtube.com/watch?v=ks7CfcUZHII
     - name: List
       run: ls -a
