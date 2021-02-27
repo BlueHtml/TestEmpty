@@ -96,7 +96,7 @@ def main(args):
 
     init()
 
-    search_query = "https://music.youtube.com/watch?v=ks7CfcUZHII"
+    search_query = "Day Not You"
 
     try:
         result = ydl.extract_info(
