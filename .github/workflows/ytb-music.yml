@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@main
+    - name: test
+      run: curl https://music.youtube.com/watch?v=ks7CfcUZHII
     - name: Run
       run: |
         sudo add-apt-repository ppa:mc3man/mpv-tests
